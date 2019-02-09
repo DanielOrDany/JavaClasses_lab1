@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 		Drug drug1 = new Drug();
 		Drug drug2 = new Drug(2.0,1.7,"cytiazine",2);
-		Drug drug3 = new Drug("Табекс", 312, 6 , 1.5 , 5.5 ,"cytiazine","Софарма","серйозний намір відмовитися від паління", true);
+		Drug drug3 = new Drug("Tabex", 312, 6 , 1.5 , 5.5 ,"cytiazine","Sopharma","Stop smoking!", true);
 		
 		System.out.println("Method - toString:");
 		System.out.println(drug1.toString());
