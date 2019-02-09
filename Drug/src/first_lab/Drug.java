@@ -42,8 +42,8 @@ public class Drug {
 		return producer;
 	}
 	/*Setters*/
-	public void setPrice(int newPrice) {
-		this.price = newPrice;
+	public void setName(String newName) {
+		this.name = newName;
 	}
 	public void setProducer(String newProducer) {
 		this.producer = newProducer;
