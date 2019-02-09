@@ -1,8 +1,8 @@
 package first_lab;
 
 public class Drug {
-	public static String name; 
-	private double price;
+	public static int price; 
+	private String name;
 	public int maxDose;
 	public double valumeActiveSubstance;
 	public double milliliters;
@@ -22,7 +22,7 @@ public class Drug {
 		this.activeSubstance = activeSubstance;
 	}
 	
-	public Drug(String name, double price,int maxDose,double valumeActiveSubstance,double milliliters,String activeSubstance,String producer,String description,boolean license) {
+	public Drug(String name, int price,int maxDose,double valumeActiveSubstance,double milliliters,String activeSubstance,String producer,String description,boolean license) {
 		this.name = name;
 		this.price = price;
 		this.maxDose = maxDose;
@@ -35,14 +35,14 @@ public class Drug {
 	}
 	
 	/*Getters*/
-	public double getPrice() {
-		return price;
+	public String getName() {
+		return name;
 	}
 	public String getProdecer() {
 		return producer;
 	}
 	/*Setters*/
-	public void setPrice(double newPrice) {
+	public void setPrice(int newPrice) {
 		this.price = newPrice;
 	}
 	public void setProducer(String newProducer) {
@@ -50,15 +50,15 @@ public class Drug {
 	}
 	/*Methods*/
 	public String toString() {
-		return String.format("Name: %s Description: %s Price: %f MaxDoses: %d Active substance: %s valumeActiveSubstance: %f Milliliters: %f Producer: %s License: %s", name, description, price, maxDose, activeSubstance, valumeActiveSubstance, milliliters, producer, license);
+		return String.format("Name: %s Description: %s Price: %d MaxDoses: %d Active substance: %s valumeActiveSubstance: %f Milliliters: %f Producer: %s License: %s", name, description, price, maxDose, activeSubstance, valumeActiveSubstance, milliliters, producer, license);
 	}
-	public static void printStaticName() {
-		System.out.println("Name: "+name);
+	public static void printStaticPrice() {
+		System.out.println("Price: "+price);
 	}
-	public void printName() {
-		System.out.println("Name: "+name);
+	public void printPrice() {
+		System.out.println("Price: "+price);
 	}
-	public void resetValues(String name, double price,int maxDose,double valumeActiveSubstance,double milliliters,String activeSubstance,String producer,String description, boolean license) {
+	public void resetValues(String name, int price,int maxDose,double valumeActiveSubstance,double milliliters,String activeSubstance,String producer,String description, boolean license) {
 		this.name = name;
 		this.price = price;
 		this.maxDose = maxDose;
