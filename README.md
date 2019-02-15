@@ -1,2 +1,2 @@
-# JavaClasses_lab1
+# JavaClasses
 A simple Java class based on a medical device
