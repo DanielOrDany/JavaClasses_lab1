@@ -1,19 +1,22 @@
 package models.airline.iot.lviv.ua;
 
-public abstract class Airplane{
-	private int seatsNumber; 
-	private double maxLoadCapacity; 
-	private int maxDistance; 
-	private int maxSpeed; 
-	private int flightRange; 
-	private int fuselageDiameter; 
+public abstract class Airplane {
+	private String name;
+	private int seatsNumber;
+	private double maxLoadCapacity;
+	private int maxDistance;
+	private int maxSpeed;
+	private int flightRange;
+	private int fuselageDiameter;
 	private CabinNarrow cabinNarrow;
-	
+
 	public Airplane() {
-		
-	} 
-	
-	public Airplane(int seatsNumber, double maxLoadCapacity, int maxDistance, int maxSpeed, int flightRange, int fuselageDiameter) {
+
+	}
+
+	public Airplane(String name, int seatsNumber, double maxLoadCapacity, int maxDistance, int maxSpeed, int flightRange,
+			int fuselageDiameter) {
+		this.name = name;
 		this.seatsNumber = seatsNumber;
 		this.maxLoadCapacity = maxLoadCapacity;
 		this.maxDistance = maxDistance;
@@ -76,6 +79,14 @@ public abstract class Airplane{
 
 	public void setCabinNarrow(CabinNarrow cabinNarrow) {
 		this.cabinNarrow = cabinNarrow;
-	} 
-	
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 }
