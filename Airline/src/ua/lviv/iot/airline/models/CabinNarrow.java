@@ -1,4 +1,4 @@
-package models.airline.iot.lviv.ua;
+package ua.lviv.iot.airline.models;
 
 public enum CabinNarrow {
 	SIXABREAST, 
