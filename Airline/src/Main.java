@@ -21,45 +21,35 @@ public class Main {
 
 		System.out.println("List elements (" + list.size() + "):");
 		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i) instanceof Airplane) {
 				System.out.println(list.get(i).getName());
-			}
 		}
 
 		manager.sortByMaxSpeed(list, SortOrder.ASCENDING);
 
 		System.out.println("\nSort by maximum speed - ascending:");
 		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i) instanceof Airplane) {
 				System.out.println(list.get(i).getName() + " = " + list.get(i).getMaxSpeed());
-			}
 		}
 
 		manager.sortByMaxSpeed(list, SortOrder.DESCENDING);
 
 		System.out.println("\nSort by maximum speed - descending:");
 		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i) instanceof Airplane) {
 				System.out.println(list.get(i).getName() + " = " + list.get(i).getMaxSpeed());
-			}
 		}
 
 		manager.sortByMaxDistance(list, SortOrder.ASCENDING);
 
 		System.out.println("\nSort by maximum speed - ascending:");
 		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i) instanceof Airplane) {
 				System.out.println(list.get(i).getName() + " = " + list.get(i).getMaxDistance());
-			}
 		}
 
 		manager.sortByMaxDistance(list, SortOrder.DESCENDING);
 
 		System.out.println("\nSort by maximum speed - descending:");
 		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i) instanceof Airplane) {
 				System.out.println(list.get(i).getName() + " = " + list.get(i).getMaxDistance());
-			}
 		}
 
 		System.out.println("\nCount seats:");
