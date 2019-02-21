@@ -1,6 +1,8 @@
 # Compiled class file
 *.class
 
+!Airline/target/site*
+
 # Log file
 *.log
 
