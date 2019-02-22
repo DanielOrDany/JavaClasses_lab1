@@ -1,2 +1,2 @@
 # JavaClasses
-A simple Java class based on a medical device
+A simple Java class based on a Airline
