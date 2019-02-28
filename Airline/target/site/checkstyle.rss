@@ -25,9 +25,9 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2019</copyright>
     <item>
-      <title>File: 9,
+      <title>File: 8,
              Errors: 0,
-             Warnings: 207,
+             Warnings: 229,
              Infos: 0
       </title>
             <link>http://maven.apache.org/checkstyle.html</link>
@@ -67,20 +67,6 @@ under the License.
                 </td>
                 <td>
                   1
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#Main.java">Main.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  44
                 </td>
                 <td>
                   0
@@ -136,7 +122,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  43
+                  104
                 </td>
                 <td>
                   0
@@ -150,7 +136,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  5
+                  10
                 </td>
                 <td>
                   0

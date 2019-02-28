@@ -1,49 +1,54 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>ua.lviv.iot</groupId>
-  <artifactId>work</artifactId>
-  <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>work</name>
-  <url>http://maven.apache.org</url>
-  
-  <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
-  
- 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ua.lviv.iot</groupId>
+	<artifactId>work</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>work</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.10</version>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.2.0</version>
 			<scope>test</scope>
-		</dependency> 
-	</dependencies>
-
-	<reporting>
-		<plugins>
-		
+		</dependency>
+	 </dependencies>
+	 
+	 <reporting>
+		 <plugins>
+			 <plugin>
+				  <groupId>org.jacoco</groupId>
+				  <artifactId>jacoco-maven-plugin</artifactId>
+				  <version>0.5.5.201112152213</version>
+				  <configuration>
+				   <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
+				   <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
+				  </configuration>				  
+			   </plugin>
 			<plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>findbugs-maven-plugin</artifactId>
-            <version>3.0.4</version>
-            <configuration>
-                <!--
-                    Enables analysis which takes more memory but finds more bugs.
-                    If you run out of memory, changes the value of the effort element
-                    to 'low'.
-                -->
-                <effort>Max</effort>
-                <!-- Reports all bugs (other values are medium and max) -->
-                <threshold>Low</threshold>
-                <!-- Produces XML report -->
-                <xmlOutput>true</xmlOutput>
-            </configuration>
-		    </plugin>
-		    
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>3.0.4</version>
+				<configuration>
+					<!-- Enables analysis which takes more memory but finds more bugs. If 
+						you run out of memory, changes the value of the effort element to 'low'. -->
+					<effort>Max</effort>
+					<!-- Reports all bugs (other values are medium and max) -->
+					<threshold>Low</threshold>
+					<!-- Produces XML report -->
+					<xmlOutput>true</xmlOutput>
+				</configuration>
+			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
@@ -51,21 +56,21 @@
 			</plugin>
 
 			<plugin>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-checkstyle-plugin</artifactId>
-			    <version>3.0.0</version>
-			    <configuration>
-			     <configLocation>src/config/checkstyle.xml</configLocation>
-			     <consoleOutput>true</consoleOutput>
-			    </configuration>
-		   </plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<configLocation>src/config/checkstyle.xml</configLocation>
+					<consoleOutput>true</consoleOutput>
+				</configuration>
+			</plugin>
 
 		</plugins>
 	</reporting>
 
 	<build>
-		<plugins>	
-			    
+		<plugins>
+
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -96,13 +101,13 @@
 					<target>8</target>
 				</configuration>
 			</plugin>
-			
-			 <plugin>
-	          <groupId>org.apache.maven.plugins</groupId>
-	          <artifactId>maven-site-plugin</artifactId>
-	          <version>3.7.1</version>
-	        </plugin>
-        
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.7.1</version>
+			</plugin>
+
 		</plugins>
 	</build>
 </project>

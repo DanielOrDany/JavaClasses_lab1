@@ -1,9 +1,9 @@
-package main.java.ua.lviv.iot.airline.managers;
+package ua.lviv.iot.airline.managers;
 
+import java.util.LinkedList;
 import java.util.List;
-import main.java.ua.lviv.iot.airline.models.Airplane;
-import main.java.ua.lviv.iot.airline.models.CargoAircraft;
-import main.java.ua.lviv.iot.airline.models.SortOrder;
+import ua.lviv.iot.airline.models.Airplane;
+import ua.lviv.iot.airline.models.SortOrder;
 
 public interface AirlineManager<A> {
 
@@ -15,6 +15,12 @@ public interface AirlineManager<A> {
 
 	double countMaxLoadCapacity(A aircraft);
 
-	void addAircraft(CargoAircraft cargoaircraft);
+	void addAirplane(Airplane airplane);
+	
+	void clearAirplaneList();
+
+	void printListOfAirplanes(String sortedBy);
+	
+	void setNewListOfAirplanes(LinkedList<Airplane> newList);
  
 }

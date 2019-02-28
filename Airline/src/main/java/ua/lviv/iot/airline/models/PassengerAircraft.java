@@ -1,4 +1,4 @@
-package main.java.ua.lviv.iot.airline.models;
+package ua.lviv.iot.airline.models;
 
 public class PassengerAircraft extends Airplane {
 	private ComfortLevel comfortLevel;

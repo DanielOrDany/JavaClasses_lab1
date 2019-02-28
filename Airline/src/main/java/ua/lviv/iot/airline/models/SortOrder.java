@@ -1,4 +1,4 @@
-package main.java.ua.lviv.iot.airline.models;
+package ua.lviv.iot.airline.models;
 
 public enum SortOrder {	
 	ASCENDING, DESCENDING;
