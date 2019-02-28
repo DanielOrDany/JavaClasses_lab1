@@ -7,9 +7,11 @@ import ua.lviv.iot.airline.models.SortOrder;
 
 public interface AirlineManager<A> {
 
-	List<Airplane> sortByMaxSpeed(SortOrder order);
+	List<Airplane> getList();
 
-	List<Airplane> sortByMaxDistance(SortOrder order);
+	List<Airplane> sortByMaxSpeed(List<Airplane> list, SortOrder order);
+
+	List<Airplane> sortByMaxDistance(List<Airplane> getlist2, SortOrder order);
 
 	int countSeats(A aircraft);
 

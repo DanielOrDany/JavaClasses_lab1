@@ -31,44 +31,55 @@ class AirlineManagerImplementationTest {
 	@DisplayName("Sort airplanes by maximum speed test in ascending")
 	void testSortByMaxSpeedByAscendingInEachAircraft() {
 		System.out.println("\nAscending-Sort by maximum speed:");
-		manager.sortByMaxSpeed(SortOrder.ASCENDING);
-		manager.printListOfAirplanes("speed");
+		manager.sortByMaxSpeed(manager.getList(),SortOrder.ASCENDING);
+		if(manager.getList().get(0).getMaxSpeed()<manager.getList().get(1).getMaxSpeed()) {
+			System.out.println("Sort is ascending!");
+		}
+		//manager.printListOfAirplanes("speed");
 	}
 
 	@Test
 	@DisplayName("Sort airplanes by maximum speed test in descending")
 	void testSortByMaxSpeedByDescendingInEachAircraft() {
 		System.out.println("\nDescending-Sort by maximum speed:");
-		manager.sortByMaxSpeed(SortOrder.DESCENDING);
-		manager.printListOfAirplanes("speed");
+		manager.sortByMaxSpeed(manager.getList(),SortOrder.DESCENDING);
+		if(manager.getList().get(0).getMaxSpeed()>manager.getList().get(1).getMaxSpeed()) {
+			System.out.println("Sort is descending!");
+		}
+		//manager.printListOfAirplanes("speed");
 	}
 
 	@Test
 	@DisplayName("Sort airplanes by maximum distance test in ascending")
 	void testSortByMaxDistanceByAscendingInEachAircraft() {
 		System.out.println("\nAscending-Sort by maximum distance:");
-		manager.sortByMaxDistance(SortOrder.ASCENDING);
-		manager.printListOfAirplanes("distance");
+		manager.sortByMaxDistance(manager.getList(),SortOrder.ASCENDING);
+		if(manager.getList().get(0).getMaxDistance()<manager.getList().get(1).getMaxDistance()) {
+			System.out.println("Sort is ascending!");
+		}
+		//manager.printListOfAirplanes("distance");
 	}
 
 	@Test
 	@DisplayName("Sort airplanes by maximum distance test in descending")
 	void testSortByMaxDistanceByDescendingInEachAircraft() {
 		System.out.println("\nDescending-Sort by maximum distance:");
-		manager.sortByMaxDistance(SortOrder.DESCENDING);
-		manager.printListOfAirplanes("distance");
+		manager.sortByMaxDistance(manager.getList(),SortOrder.DESCENDING);
+		if(manager.getList().get(0).getMaxDistance()>manager.getList().get(1).getMaxDistance()) {
+			System.out.println("Sort is desscending!");
+		}
+		//manager.printListOfAirplanes("distance");
 	}
-	
+
 	@AfterAll
 	@DisplayName("Sort empty airplanes by maximum speed test in ascending")
 	static void testSortEmptyListByMaxSpeedInEachAircraft() {
 		System.out.println("\nEmpty EmptyListByMaxSpeed");
 		manager.clearAirplaneList();
-		manager.sortByMaxSpeed(SortOrder.ASCENDING);
+		manager.sortByMaxSpeed(manager.getList(),SortOrder.ASCENDING);
 		manager.printListOfAirplanes("speed");
-		manager.sortByMaxSpeed(SortOrder.DESCENDING);
+		manager.sortByMaxSpeed(manager.getList(),SortOrder.DESCENDING);
 		manager.printListOfAirplanes("speed");
-		
 	}
 
 	@AfterAll
@@ -76,91 +87,91 @@ class AirlineManagerImplementationTest {
 	static void testSortEmptyListByMaxDistanceInEachAircraft() {
 		System.out.println("\nEmpty EmptyListByMaxDistance");
 		manager.clearAirplaneList();
-		manager.sortByMaxDistance(SortOrder.ASCENDING);
+		manager.sortByMaxDistance(manager.getList(),SortOrder.ASCENDING);
 		manager.printListOfAirplanes("distance");
-		manager.sortByMaxDistance(SortOrder.DESCENDING);
+		manager.sortByMaxDistance(manager.getList(),SortOrder.DESCENDING);
 		manager.printListOfAirplanes("distance");
 	}
-	
+
 	@Test
 	@DisplayName("Add null element to list of airplanes")
 	void testListWithNewNullElement() {
 		manager.addAirplane(null);
 	}
-	
+
 	@Test
 	@DisplayName("Test PrintListOfAirplanes with null input parameter")
 	void testPrintWithNullInputParameter() {
 		manager.printListOfAirplanes(null);
 	}
-	
+
 	@Test
 	@DisplayName("Test countSeats(Airplane example)")
 	void testCountSeats() {
 		int result = manager.countSeats(new PassengerAircraft("Test", 333, 3000, 300, 300, 3200, 3));
-		System.out.println("\nCount Seats Airplane Parameter = "+result);	
+		System.out.println("\nCount Seats Airplane Parameter = " + result);
 	}
-	
+
 	@Test
 	@DisplayName("Test countSeats(null)")
 	void testCountSeatsWithNullParameter() {
 		int result = manager.countSeats(null);
-		System.out.println("\nCount Seats Null Parameter = "+result);	
+		System.out.println("\nCount Seats Null Parameter = " + result);
 	}
-	
+
 	@Test
 	@DisplayName("Test countSeatsWithNoneParameter()")
 	void testCountSeatsWithNoneParameter() {
 		int result = manager.countSeats(new PassengerAircraft());
-		System.out.println("\nCount Seats None Parameter = "+result);	
+		System.out.println("\nCount Seats None Parameter = " + result);
 	}
-	
+
 	@Test
 	@DisplayName("Test countMaxLoadCapacity(Airplane example)")
 	void testCountMaxLoadCapacity() {
 		double result = manager.countMaxLoadCapacity(new PassengerAircraft("Test", 333, 3000, 300, 300, 3200, 3));
-		System.out.println("\nCount Max Load Capacity Airplane Parameter = "+result);	
+		System.out.println("\nCount Max Load Capacity Airplane Parameter = " + result);
 	}
-	
+
 	@Test
 	@DisplayName("Test countMaxLoadCapacity(null)")
 	void testCountMaxLoadCapacityWithNullParameter() {
 		double result = manager.countMaxLoadCapacity(null);
-		System.out.println("\nCount Max Load Capacity With Null Parameter = "+result);	
+		System.out.println("\nCount Max Load Capacity With Null Parameter = " + result);
 	}
-	
+
 	@Test
 	@DisplayName("Test countMaxLoadCapacity with none parameter")
 	void testCountMaxLoadCapacityWithNoneParameter() {
 		double result = manager.countMaxLoadCapacity(new CargoAircraft());
-		System.out.println("\nCount Max Load Capacity With None Parameter = "+result);	
+		System.out.println("\nCount Max Load Capacity With None Parameter = " + result);
 	}
-	
+
 	@Test
 	@DisplayName("Test Set New List Of Ariplanes")
 	void testSetNewListOfAriplanes() {
 		System.out.println("\n~Set New List Of Ariplanes~");
 		manager = new AirlineManagerImplementation();
-		list = new LinkedList<Airplane>(); 
-		list.add(new PassengerAircraft("TestNewListAirplane1", 100, 10000, 1000, 110, 1001, 1));
-		list.add(new CargoAircraft("TestNewListAirplane2", 200, 20000, 2000, 220, 2002, 2));
-		list.add(new PassengerAircraft("TestNewListAirplane3", 300, 30000, 30000, 330, 3004, 3));
+		list = new LinkedList<Airplane>();
+		list.add(new PassengerAircraft("TestNewListItemAirplane1", 100, 10000, 1000, 110, 1001, 1));
+		list.add(new CargoAircraft("TestNewListItemAirplane2", 200, 20000, 2000, 220, 2002, 2));
+		list.add(new PassengerAircraft("TestNewListItemAirplane3", 300, 30000, 30000, 330, 3004, 3));
 		manager.setNewListOfAirplanes(list);
 		manager.printListOfAirplanes("speed");
 	}
-	
+
 	@Test
 	@DisplayName("Check exist enum CabinNarrow")
 	void testGetEnumCabinNarrow() {
 		System.out.println("\n~CabinNarrow~");
 		System.out.println((CabinNarrow.FIVEABREAST).equals(CabinNarrow.THREEBREAST));
 	}
-	
+
 	@Test
 	@DisplayName("Check exist enum ComfortLevel")
 	void testGetEnumComfortLevel() {
 		System.out.println("\n~ComfortLevel~");
 		System.out.println((ComfortLevel.BUSINESS).equals(ComfortLevel.ECONOMY));
 	}
-	
+
 }

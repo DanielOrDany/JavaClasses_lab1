@@ -11,14 +11,14 @@ public class AirlineManagerImplementation implements AirlineManager<Airplane> {
 	private LinkedList<Airplane> list = new LinkedList<Airplane>();
 
 	@Override
-	public List<Airplane> sortByMaxSpeed(SortOrder order) {
+	public List<Airplane> sortByMaxSpeed(List<Airplane> listForSorting, SortOrder order) {
 		try {
-			if (!list.isEmpty()) {
+			if (!listForSorting.isEmpty()) {
 				if (order == SortOrder.ASCENDING) {
-					list.sort(Comparator.comparing(Airplane::getMaxSpeed));
+					listForSorting.sort(Comparator.comparing(Airplane::getMaxSpeed));
 				} else if (order == SortOrder.DESCENDING) {
-					list.sort(Comparator.comparing(Airplane::getMaxSpeed));
-					Collections.reverse(list);
+					listForSorting.sort(Comparator.comparing(Airplane::getMaxSpeed));
+					Collections.reverse(listForSorting);
 				}
 			} else {
 				System.out.println("-> List of airplanes is empty");
@@ -34,14 +34,14 @@ public class AirlineManagerImplementation implements AirlineManager<Airplane> {
 	}
 
 	@Override
-	public List<Airplane> sortByMaxDistance(SortOrder order) {
+	public List<Airplane> sortByMaxDistance(List<Airplane> listForSorting, SortOrder order) {
 		try {
-			if (!list.isEmpty()) {
+			if (!listForSorting.isEmpty()) {
 				if (order == SortOrder.ASCENDING) {
-					list.sort(Comparator.comparing(Airplane::getMaxDistance));
+					listForSorting.sort(Comparator.comparing(Airplane::getMaxDistance));
 				} else if (order == SortOrder.DESCENDING) {
-					list.sort(Comparator.comparing(Airplane::getMaxDistance));
-					Collections.reverse(list);
+					listForSorting.sort(Comparator.comparing(Airplane::getMaxDistance));
+					Collections.reverse(listForSorting);
 				}
 			} else {
 				System.out.println("-> List of airplanes is empty");
@@ -115,6 +115,9 @@ public class AirlineManagerImplementation implements AirlineManager<Airplane> {
 
 	public void setList(LinkedList<Airplane> list) {
 		this.list = list;
+	}
+	public LinkedList<Airplane> getList() {
+		return list;
 	}
 	
 	public void setNewListOfAirplanes(LinkedList<Airplane> newList) {
