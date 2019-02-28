@@ -34,6 +34,8 @@ class AirlineManagerImplementationTest {
 		manager.sortByMaxSpeed(manager.getList(),SortOrder.ASCENDING);
 		if(manager.getList().get(0).getMaxSpeed()<manager.getList().get(1).getMaxSpeed()) {
 			System.out.println("Sort is ascending!");
+		} else {
+			System.out.println("Sort is not ascending!");
 		}
 		//manager.printListOfAirplanes("speed");
 	}
@@ -45,6 +47,8 @@ class AirlineManagerImplementationTest {
 		manager.sortByMaxSpeed(manager.getList(),SortOrder.DESCENDING);
 		if(manager.getList().get(0).getMaxSpeed()>manager.getList().get(1).getMaxSpeed()) {
 			System.out.println("Sort is descending!");
+		} else {
+			System.out.println("Sort is not descending!");
 		}
 		//manager.printListOfAirplanes("speed");
 	}
@@ -56,6 +60,8 @@ class AirlineManagerImplementationTest {
 		manager.sortByMaxDistance(manager.getList(),SortOrder.ASCENDING);
 		if(manager.getList().get(0).getMaxDistance()<manager.getList().get(1).getMaxDistance()) {
 			System.out.println("Sort is ascending!");
+		} else {
+			System.out.println("Sort is not ascending!");
 		}
 		//manager.printListOfAirplanes("distance");
 	}
@@ -67,6 +73,8 @@ class AirlineManagerImplementationTest {
 		manager.sortByMaxDistance(manager.getList(),SortOrder.DESCENDING);
 		if(manager.getList().get(0).getMaxDistance()>manager.getList().get(1).getMaxDistance()) {
 			System.out.println("Sort is desscending!");
+		}else {
+			System.out.println("Sort is not descending!");
 		}
 		//manager.printListOfAirplanes("distance");
 	}
