@@ -1,7 +1,7 @@
 # Compiled class file
 *.class
 
-!Airline/target/site*
+!Airline/target*
 
 # Log file
 *.log
