@@ -1,0 +1,9 @@
+name, seatsNumber, maxLoadCapacity, maxDistance, maxSpeed, flightRange, fuselageDiameter, comfortLevel, wifi
+Boeing747, 120, 16000.0, 2000, 500, 1000, 6, null, false
+-------------------------------------------------------------------------
+name, seatsNumber, maxLoadCapacity, maxDistance, maxSpeed, flightRange, fuselageDiameter, loadingAndUnloadingSystem, cargoAircraftCategory
+Antonov, 510, 100000.0, 900, 900, 1200, 12, false, null
+-------------------------------------------------------------------------
+name, seatsNumber, maxLoadCapacity, maxDistance, maxSpeed, flightRange, fuselageDiameter, comfortLevel, wifi
+Boeing777, 550, 90000.0, 950, 892, 1300, 9, null, false
+-------------------------------------------------------------------------
